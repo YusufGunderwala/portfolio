@@ -2139,7 +2139,7 @@
               </div>
 
               <div class="tj-contact-form">
-                <form onsubmit="sendEmail(); reset(); return false;" id="contact-form">
+                <form onsubmit="sendEmail(); reset(); return false;">
                   <div class="row gx-3">
                     <div class="col-sm-6">
                       <div class="form_group">
@@ -2170,7 +2170,7 @@
                           </option>
                           <option value="VE">Video Editing</option>
                           <option value="logo">Logo Design</option>
-                          <option value="TD">Thumbnail Design/option>
+                          <option value="TD">Thumbnail Design</option>
                           <option value="web">Website Development</option>
                           <option value="py ">Python Development</option>
                           <option value="java ">Java Development</option>
@@ -2183,11 +2183,11 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <div class="form_btn">
-                        <button type="submit" class="btn tj-btn-primary">
-                          Send Message
-                        </button>
-                      </div>
+
+                      <button type="submit" class="btn tj-btn-primary">
+                        Send Message
+                      </button>
+
                     </div>
                   </div>
                 </form>
@@ -2224,8 +2224,9 @@
     </section>
     <!-- CONTACT SECTION END -->
 
+    <!-- ----------------------------------------------------------------------- -->
     <!-- BEGIN: Contact Form Success Modal Message -->
-    <div class="modal contact_modal" id="message_sent" tabindex="-1">
+    <!-- <div class="modal contact_modal" id="message_sent" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -2247,11 +2248,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- END: Contact Form Success Modal Message -->
 
     <!-- BEGIN: Contact Form Fail Modal Message -->
-    <div class="modal contact_modal failed" id="message_fail" tabindex="-1">
+    <!-- <div class="modal contact_modal failed" id="message_fail" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -2270,7 +2271,8 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+    <!-- ------------------------------------------------------- -->
     <!-- END: Contact Form Fail Modal Message End -->
   </main>
 
@@ -2307,6 +2309,7 @@
   <!-- FOOTER AREA END -->
 
   <!-- CSS here -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/nice-select.min.js"></script>
@@ -2322,7 +2325,6 @@
   <script src="assets/js/odometer.min.js"></script>
   <script src="assets/js/magnific-popup.js"></script>
   <script src="assets/js/validate.min.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
     function sendEmail() {
       Email.send({
@@ -2330,13 +2332,12 @@
         Username: "yusufgunderwala0@gmail.com",
         Password: "C3F8F69692FB24B64FB055076AA7246C8017",
         To: "yusufgunderwala0@gmail.com",
-        From: document.getElementById(" ").value,
+        From: document.getElementById("conEmail").value,
         Subject: "New Contact Form Inquire",
         Body: "And this is the body",
       }).then((message) => alert(message));
     }
-  </script>
-
+      </script>
   <script src="assets/js/main.js"></script>
 </body>
 
